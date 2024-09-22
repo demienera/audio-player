@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,65 @@
   <link rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon.png">
   <title>Audio Player</title>
 </head>
+
 <body>
-<script src="index.js"></script>
+  <h1 class="visually-hidden">Audio player</h1>
+  <main class="player-container">
+    <div class="cover">
+      <img class="cover__img" src="./assets/img/dontstartnow.png" alt="Album Cover">
+    </div>
+    <div class="content">
+      <div class="track-info">
+        <p>Don't start now</p>
+        <h4>Dua Lipa</h4>
+      </div>
+      <div class="controls">
+        <button id="prev" class="control-button">
+          <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="4" width="2" height="16" />
+            <polygon points="4,12 16,20 16,4 4,12" />
+          </svg>
+        </button>
+        <button id="play" class="control-button">
+          <svg id="play-icon" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="8,5 19,12 8,19" />
+          </svg>
+          <svg id="pause-icon" style="display:none;" width="30" height="30" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="5" width="4" height="14" />
+            <rect x="14" y="5" width="4" height="14" />
+          </svg>
+        </button>
+        <button id="next" class="control-button">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="2" height="16" />
+            <polygon points="20,12 8,20 8,4 20,12" />
+          </svg>
+        </button>
+      </div>
+      <div class="progress-container">
+        <span id="current-time">0:00</span>
+        <input type="range" id="progress" value="0" min="0" max="100">
+        <span id="duration">3:53</span>
+      </div>
+      <audio id="audio" src="./assets/audio/dontstartnow.mp3"></audio>
+      <div class="bars">
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+        <div class="bars__item"></div>
+      </div>
+    </div>
+  </main>
+  <script src="index.js"></script>
 </body>
+
 </html>
