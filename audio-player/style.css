@@ -10,6 +10,7 @@
 }
 
 body {
+  font-family: "Playpen Sans", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
