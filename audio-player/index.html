@@ -15,12 +15,17 @@
   <h1 class="visually-hidden">Audio player</h1>
   <main class="player-container">
     <div class="cover">
-      <img class="cover__img" src="./assets/img/dontstartnow.png" alt="Album Cover">
+      <img class="cover__img" src="./assets/img/back.webp" alt="Album Cover">
     </div>
     <div class="content">
       <div class="track-info">
-        <p>Don't start now</p>
-        <h4>Dua Lipa</h4>
+        <p>Back From The Dead</p>
+        <h4>Skillet</h4>
+      </div>
+      <div class="progress-container">
+        <span id="current-time">0:00</span>
+        <input type="range" id="progress" value="0" min="0" max="100">
+        <span id="duration"></span>
       </div>
       <div class="controls">
         <button id="prev" class="control-button">
@@ -46,26 +51,35 @@
           </svg>
         </button>
       </div>
-      <div class="progress-container">
-        <span id="current-time">0:00</span>
-        <input type="range" id="progress" value="0" min="0" max="100">
-        <span id="duration">3:53</span>
+
+      <div class="volume-control">
+        <label class="volume-label" for="volume">
+          <svg class="volume-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+            <path
+              d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+            <path
+              d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z" />
+          </svg>
+        </label>
+        <input type="range" id="volume" min="0" max="100" value="30">
       </div>
-      <audio id="audio" src="./assets/audio/dontstartnow.mp3"></audio>
-      <div class="bars">
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-        <div class="bars__item"></div>
-      </div>
+      <audio id="audio" src="./assets/audio/skillet-back.mp3"></audio>
+    </div>
+    <div class="bars">
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
+      <div class="bars__item"></div>
     </div>
   </main>
   <script src="index.js"></script>

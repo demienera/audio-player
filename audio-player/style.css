@@ -46,15 +46,14 @@ body {
   max-inline-size: 100%;
   padding: 20px;
   display: grid;
-  row-gap: 15px;
+  row-gap: 20px;
 }
 
 .controls {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 50px;
-  padding: 10px;
+  column-gap: 40px;
   border-radius: 5px;
 }
 
@@ -136,20 +135,16 @@ body {
   display: none;
 }
 
-#progress {
-  cursor: pointer;
-  inline-size: 100px;
-  margin-inline: 10px;
-}
-
 #current-time,
 #duration {
   color: #fff;
   font-size: 14px;
 }
 
-#progress {
+#progress,
+#volume {
   -webkit-appearance: none;
+  margin-inline: 10px;
   appearance: none;
   inline-size: 100%;
   block-size: 8px;
@@ -159,6 +154,7 @@ body {
   margin-block: 10px;
   overflow: hidden;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 #progress::-webkit-progress-bar {
@@ -176,13 +172,13 @@ body {
   border-radius: 5px 0 0 5px;
 }
 
-#progress::-webkit-slider-thumb {
+#progress::-webkit-slider-thumb,
+#volume::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   inline-size: 15px;
   block-size: 15px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #00ffdd;
+  background: #0ee9a0;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -235,6 +231,35 @@ body {
 
 .bars__item:nth-child(4n+3) {
   animation-delay: 0.75s;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#volume {
+  inline-size: 150px;
+  margin-inline: 10px;
+  background: linear-gradient(to right, #1e1e1e 30%, #696868 30%);
+}
+
+.volume-label {
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.volume-icon {
+  inline-size: 25px;
+  block-size: 25px;
+  fill: rgba(255, 255, 255, 0.3);
+  stroke: none;
+}
+
+#volume-label {
+  font-size: 16px;
 }
 
 @keyframes play {
