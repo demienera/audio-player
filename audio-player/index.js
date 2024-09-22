@@ -58,6 +58,7 @@ function playPauseTrack() {
 		audio.play();
 		playIcon.style.display = 'none';
 		pauseIcon.style.display = 'block';
+		document.querySelector('.bars').style.opacity = '1';
 		runBars();
 	} else {
 		audio.pause();

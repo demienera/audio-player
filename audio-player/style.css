@@ -217,6 +217,7 @@ body {
   display: flex;
   gap: 4px;
   block-size: 64px;
+  opacity: 0;
 }
 
 .bars__item {
