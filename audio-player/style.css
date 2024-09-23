@@ -16,8 +16,12 @@ body {
   align-items: center;
   flex-direction: column;
   block-size: 100vh;
-  background: #2f3640;
   margin: 0;
+  background: #2f3640;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
 }
 
 .player-container {
@@ -277,6 +281,7 @@ body {
   margin-block-start: 30px;
   display: flex;
   gap: 20px;
+  color: #0ee9a0;
 }
 
 .footer-icon {

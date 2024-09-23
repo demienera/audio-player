@@ -49,8 +49,6 @@ function updateTrackInfo(track) {
 	document.querySelector('.cover img').src = `./assets/img/${track.cover}`;
 
 	document.body.style.backgroundImage = `url(./assets/img/${track.cover})`;
-	document.body.style.backgroundSize = 'cover';
-	document.body.style.backdropFilter = 'blur(10px)';
 }
 
 function playPauseTrack() {
